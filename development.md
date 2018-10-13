@@ -1,90 +1,81 @@
 ---
 sidebar: auto
 ---
-# Development recommendations
+# 开发者建议
 
-Before continuing, make sure you've read:
+在继续之前，确保你已经阅读：
 
 1. [README](https://github.com/markdown-it/markdown-it#markdown-it)
-2. [API documentation](https://markdown-it.github.io/markdown-it/)
-3. [Architecture description](architecture.md)
+2. [API 文档](https://markdown-it.github.io/markdown-it/)
+3. [架构说明](architecture.md)
 
 
-## General considerations for plugins.
+## 对插件的一般性考虑
 
-1. Try to find the right place for your plugin rule:
-  - Will it conflict with existing markup (by priority)?
-    - If yes - you need to write an inline or block rule.
-    - If no - you can morph tokens within core chains.
-  - Remember that token morphing in core chains is always more simple than writing
-    block or inline rules, if you don't copy existing ones. However,
-    block and inline rules are usually faster.
-  - Sometimes, it's enough to only modify the renderer, for example, to add
-    header IDs or `target="_blank"` for the links.
-  - Plugins should not require the `markdown-it` package as dependency in `package.json`.
-    If you need access to internals, those are available via a parser instance,
-    passed on plugin load. See properties of main class and nested objects.
-2. Search existing
-   [plugins](https://www.npmjs.org/browse/keyword/markdown-it-plugin)
-   or [rules](https://github.com/markdown-it/markdown-it/tree/master/lib),
-   doing something similar. It can be more simple to modify existing code,
-   instead of writing all from scratch.
-3. If you did all steps above, but still has questions - ask in
-   [tracker](https://github.com/markdown-it/markdown-it/issues). But, please:
-   - Be specific. Generic questions like "how to do plugins" and
-     "how to learn programming" are not accepted.
-   - Don't ask us to break [CommonMark](http://commonmark.org/) specification.
-     Such things should be discussed first on [CommonMark forum](http://talk.commonmark.org/).
+1. 尝试为插件规则找到正确的位置：
+  - 它会与现有的标签（优先级）冲突吗？
+    - 如果是的话，你需要写一个内联或块规则。
+    - 如果没有 - 你可以改变核心链中的 token。
+  - 记住，核心链中的 token 变换总是比编写更简单。
+    - 块或内联规则
+
+      如果你不复制现有的规则。然而，块和内联规则通常更快。
+  - 有时，仅修改渲染器就足够了。例如，添加标题 ID 或给链接添加 `target="_blank"`。
+  - 插件不应该要求 `markdown-it` 包作为包 `package.json` 中的依赖项。
+    如果需要访问内部实体，则可以通过解析器实例获得这些信息，通过插件加载。请参考主类和嵌套对象的属性。
+2. 搜索现有的插件
+   [插件](https://www.npmjs.org/browse/keyword/markdown-it-plugin)或[规则](https://github.com/markdown-it/markdown-it/tree/master/lib)其实做类似的事情。修改现有代码可以更简单，而不是从头开始编写。
+  
+3. 如果你做了所有的步骤，但仍然有问题-问 [tracker](https://github.com/markdown-it/markdown-it/issues)。但是，请注意：
+   - 具体点。诸如“如何做插件”之类的通用问题，“如何学习编程”是不被待见的。
+   - 不要要求我们打破 [CommonMark](http://commonmark.org/) 规范。
+     这样的事情应该首先在 [CommonMark 论坛](http://talk.commonmark.org/) 讨论。
 
 
-## Notes for NPM packages
+## NPM 软件包的注释
 
-To simplify search:
+简化搜索：
 
-- add to `package.json` keyswords `markdown-it` and `markdown-it-plugin` for plugins.
-- add keyword `markdown-it` for any other related packages.
+- 给插件的 `package.json` 添加关键字 `markdown-it` 和 `markdown-it-plugin` 。
+- 为其他相关的包添加关键字 `markdown-it`。
 
 
 ## FAQ
 
 
-#### I need async rule, how to do it?
+#### 我需要一个异步规则，该怎么做？
 
-Sorry. You can't do it directly. All complex parsers are sync by nature. But you
-can use workarounds:
+抱歉。你不能直接做这件事。所有复杂的解析器本质上是同步的。但是你可以使用如下解决方案：
 
-1. On parse phase, replace content by random number and store it in `env`.
-2. Do async processing over collected data.
-3. Render content and replace those random numbers with text; or replace first, then render.
+1. 在解析阶段，用随机数替换内容，并将其存储在 `env` 中。
+2. 对收集的数据进行异步处理。
+3. 渲染内容并用文本替换这些随机数字；或者替换第一个，然后渲染。
 
-Alternatively, you can render HTML, then parse it to DOM, or
-[cheerio](https://github.com/cheeriojs/cheerio) AST, and apply transformations
-in a more convenient way.
+或者，你可以渲染成 HTML，然后将其解析为 DOM，抑或 [cheerio](https://github.com/cheeriojs/cheerio) AST，并用更方便的方式应用转变。
 
 
-#### How to replace part of text token with link?
+#### 如何用链接替换文本标记的一部分？
 
-The right sequence is to split text to several tokens and add link tokens in between.
-The result will be: `text` + `link_open` + `text` + `link_close` + `text`.
+正确的顺序是将文本拆分为几个 token 并在其间添加链接 token。
 
-See implementations of [linkify](https://github.com/markdown-it/markdown-it/blob/master/lib/rules_core/linkify.js) and [emoji](https://github.com/markdown-it/markdown-it-emoji/blob/master/lib/replace.js) - those do text token splits.
+结果将是：`text` + `link_open` + `text` + `link_close` + `text`。
 
-__Note.__ Don't try to replace text with HTML markup! That's not secure.
+参考 [linkify](https://github.com/markdown-it/markdown-it/blob/master/lib/rules_core/linkify.js) 和 [emoji](https://github.com/markdown-it/markdown-it-emoji/blob/master/lib/replace.js) 的实现- 它们执行文本 token 分割。
 
-
-#### Why my inline rule is not executed?
-
-The inline parser skips pieces of texts to optimize speed. It stops only on [a small set of chars](https://github.com/markdown-it/markdown-it/blob/master/lib/rules_inline/text.js), which can be tokens. We did not made this list extensible for performance reasons too.
-
-If you are absolutely sure that something important is missing there - create a
-ticket and we will consider adding it as a new charcode.
+__注意.__ 不要用 HTML 标签替换文本！那不安全。
 
 
-#### Why do you reject some useful things?
+#### 为什么不执行我的内联规则？
 
-We do a markdown parser. It should keep the "markdown spirit". Other things should
-be kept separate, in plugins, for example. We have no clear criteria, sorry.
-Probably, you will find [CommonMark forum](http://talk.commonmark.org/) a useful read to understand us better.
+内联解析器跳过了文本片段以便优化速度。它只在[一小组字符](https://github.com/markdown-it/markdown-it/blob/master/lib/rules_inline/text.js)上驻足，这可以是 tokens 。由于性能原因，我们没有将此列表扩展。
 
-Of course, if you find the architecture of this parser interesting for another type
-of markup, you are welcome to reuse it in another project.
+如果你绝对确信那里缺少了重要的东西 - 创建一个 ticket，我们会考虑把它作为一个新的字符。
+
+
+#### 你为什么拒绝一些有用的东西？
+
+我们做的是一个 markdown 解析器。它应该保持“markdown 精神”。其他事情应该隔离。例如插件。抱歉，我们没有明确的标准。
+
+也许，你会发现 [CommonMark 论坛](http://talk.commonmark.org/)是一个有用的读物，从而更好地理解我们。
+
+当然，如果你觉得对另一种标签的类型来说，这个解析器的架构你很感兴趣，欢迎你在另一个项目中重用它。
