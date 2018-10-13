@@ -28,16 +28,16 @@ var result = md.renderInline('__markdown-it__ rulezz!');
 ```
 
 ### 构造器
-[new MarkdownIt](https://markdown-it.github.io/markdown-it/#MarkdownIt.new "new MarkdownIt (constructor)")
+[new MarkdownIt](#markdownit-new "new MarkdownIt (constructor)")
 
 ### 类方法
-[configure](https://markdown-it.github.io/markdown-it/#MarkdownIt.configure "MarkdownIt.configure (class method)"), [disable](https://markdown-it.github.io/markdown-it/#MarkdownIt.disable "MarkdownIt.disable (class method)"), [enable](https://markdown-it.github.io/markdown-it/#MarkdownIt.enable "MarkdownIt.enable (class method)"), [parse](https://markdown-it.github.io/markdown-it/#MarkdownIt.parse "MarkdownIt.parse (class method)"), [parseInline](https://markdown-it.github.io/markdown-it/#MarkdownIt.parseInline "MarkdownIt.parseInline (class method)"), [render](https://markdown-it.github.io/markdown-it/#MarkdownIt.render "MarkdownIt.render (class method)"), [renderInline](https://markdown-it.github.io/markdown-it/#MarkdownIt.renderInline "MarkdownIt.renderInline (class method)"), [set](https://markdown-it.github.io/markdown-it/#MarkdownIt.set "MarkdownIt.set (class method)"), [use](https://markdown-it.github.io/markdown-it/#MarkdownIt.use "MarkdownIt.use (class method)")
+[configure](#markdownit-configure "MarkdownIt.configure (class method)"), [disable](#markdownit-disable "MarkdownIt.disable (class method)"), [enable](#markdownit-enable "MarkdownIt.enable (class method)"), [parse](#markdownit-parse "MarkdownIt.parse (class method)"), [parseInline](#markdownit-parseinline "MarkdownIt.parseInline (class method)"), [render](#markdownit-render "MarkdownIt.render (class method)"), [renderInline](#markdownit-renderinline "MarkdownIt.renderInline (class method)"), [set](#markdownit-set "MarkdownIt.set (class method)"), [use](#markdownit-use "MarkdownIt.use (class method)")
 
 ### 实例方法
-[normalizeLink](https://markdown-it.github.io/markdown-it/#MarkdownIt.prototype.normalizeLink "MarkdownIt#normalizeLink (instance method)"), [normalizeLinkText](https://markdown-it.github.io/markdown-it/#MarkdownIt.prototype.normalizeLinkText "MarkdownIt#normalizeLinkText (instance method)"), [validateLink](https://markdown-it.github.io/markdown-it/#MarkdownIt.prototype.validateLink "MarkdownIt#validateLink (instance method)")
+[normalizeLink](#markdownit-normalizelink "MarkdownIt#normalizeLink (instance method)"), [normalizeLinkText](#markdownit-normalizelinktext "MarkdownIt#normalizeLinkText (instance method)"), [validateLink](#markdownit-validatelink "MarkdownIt#validateLink (instance method)")
 
 ### 实例属性
-[block](https://markdown-it.github.io/markdown-it/#MarkdownIt.prototype.block "MarkdownIt#block (instance property)"), [core](https://markdown-it.github.io/markdown-it/#MarkdownIt.prototype.core "MarkdownIt#core (instance property)"), [helpers](https://markdown-it.github.io/markdown-it/#MarkdownIt.prototype.helpers "MarkdownIt#helpers (instance property)"), [inline](https://markdown-it.github.io/markdown-it/#MarkdownIt.prototype.inline "MarkdownIt#inline (instance property)"), [linkify](https://markdown-it.github.io/markdown-it/#MarkdownIt.prototype.linkify "MarkdownIt#linkify (instance property)"), [renderer](https://markdown-it.github.io/markdown-it/#MarkdownIt.prototype.renderer "MarkdownIt#renderer (instance property)"), [utils](https://markdown-it.github.io/markdown-it/#MarkdownIt.prototype.utils "MarkdownIt#utils (instance property)")
+[block](#markdownit-block "MarkdownIt#block (instance property)"), [core](#markdownit-core "MarkdownIt#core (instance property)"), [helpers](#markdownit-helpers "MarkdownIt#helpers (instance property)"), [inline](#markdownit-inline "MarkdownIt#inline (instance property)"), [linkify](#markdownit-linkify "MarkdownIt#linkify (instance property)"), [renderer](#markdownit-renderer "MarkdownIt#renderer (instance property)"), [utils](#markdownit-utils "MarkdownIt#utils (instance property)")
 
 ## MarkdownIt.new
 [源代码](https://github.com/markdown-it/markdown-it/blob/master/lib/index.js#L221)
@@ -150,7 +150,7 @@ MarkdownIt.configure(presets)
 * **list** *(String|Array)* -- 要启用的规则名称或规则名称列表。
 * **ignoreInvalid** *(Boolean)* -- 设为 `true` 来忽略规则未发现时的错误。
 
-类似 [MarkdownIt.enable](https://markdown-it.github.io/markdown-it/#MarkdownIt.enable)，但用于禁用指定的规则们。
+类似 [MarkdownIt.enable](#markdownit-enable)，但用于禁用指定的规则们。
 
 ## MarkdownIt.enable
 
@@ -204,7 +204,7 @@ MarkdownIt.parseInline(src, env) -> Array
 * **src** *(String|Array)* -- 源代码的字符串
 * **env** *(Object)* -- (运行)环境沙箱
 
-类似于 [MarkdownIt.parse](https://markdown-it.github.io/markdown-it/#MarkdownIt.parse "MarkdownIt.parse (class method)") 但是会忽略所有块规则。它返回一个 token 列表，该列表包含一个单独的 `inline` 元素，其中包含在 `children` 属性中解析的内联 token 们。它也会更新 `env` 对象。
+类似于 [MarkdownIt.parse](#markdownit-parse "MarkdownIt.parse (class method)") 但是会忽略所有块规则。它返回一个 token 列表，该列表包含一个单独的 `inline` 元素，其中包含在 `children` 属性中解析的内联 token 们。它也会更新 `env` 对象。
 
 ## MarkdownIt.render
 
@@ -219,7 +219,7 @@ MarkdownIt.render(src[, env]) -> String
 
 将 markdown 字符串转换为 HTML。它对你来说肯定是最有魔力的：
 
-`env` 可用于注入附加的元数据（默认情况下为 `{}`）。但你大概率用不到它，参考在 [MarkdownIt.parse](https://markdown-it.github.io/markdown-it/#MarkdownIt.parse "MarkdownIt.parse (class method)") 里的注释。 
+`env` 可用于注入附加的元数据（默认情况下为 `{}`）。但你大概率用不到它，参考在 [MarkdownIt.parse](#markdownit-parse "MarkdownIt.parse (class method)") 里的注释。
 
 ## MarkdownIt.renderInline
 
@@ -230,7 +230,7 @@ MarkdownIt.render(src[, env]) -> String
 * **src** *(String|Array)* -- 源代码的字符串
 * **env** *(Object)* -- (运行)环境沙箱
 
-类似于 [MarkdownIt.render](https://markdown-it.github.io/markdown-it/#MarkdownIt.render "MarkdownIt.render (class method)")，但对于单个段落的内容，(渲染的)结果不会被 `<p>` 标签包裹。
+类似于 [MarkdownIt.render](#markdownit-render "MarkdownIt.render (class method)")，但对于单个段落的内容，(渲染的)结果不会被 `<p>` 标签包裹。
 
 ## MarkdownIt.set
 
@@ -314,7 +314,7 @@ md.validateLink = function () { return true; }
 MarkdownIt#block -> ParserBlock
 ```
 
-[ParserBlock](https://markdown-it.github.io/markdown-it/#ParserBlock "ParserBlock (class)") 的实例。当编写插件时，你可能用它来添加新规则。对于简单的规则控制，可以使用 [MarkdownIt.disable](https://markdown-it.github.io/markdown-it/#MarkdownIt.disable "MarkdownIt.disable (class method)") 和 [MarkdownIt.enable](https://markdown-it.github.io/markdown-it/#MarkdownIt.enable "MarkdownIt.enable (class method)")。
+[ParserBlock](#./ParserBlock.html "ParserBlock (class)") 的实例。当编写插件时，你可能用它来添加新规则。对于简单的规则控制，可以使用 [MarkdownIt.disable](#markdownit-disable "MarkdownIt.disable (class method)") 和 [MarkdownIt.enable](#markdownit-enable "MarkdownIt.enable (class method)")。
 
 ## MarkdownIt#core
 
@@ -324,7 +324,7 @@ MarkdownIt#block -> ParserBlock
 MarkdownIt#core -> Core
 ```
 
-[Core](https://markdown-it.github.io/markdown-it/#Core "Core (class)") 的链式调用实例。
+[Core](./Core.html "Core (class)") 的链式调用实例。
 
 ## MarkdownIt#helpers
 
@@ -344,7 +344,7 @@ MarkdownIt#helpers -> helpers
 MarkdownIt#inline -> ParserInline
 ```
 
-[ParserInline](https://markdown-it.github.io/markdown-it/#ParserInline "ParserInline (class)")的实例。当编写插件时，你可能用它来添加新规则。对于简单的规则控制，可以使用 [MarkdownIt.disable](https://markdown-it.github.io/markdown-it/#MarkdownIt.disable "MarkdownIt.disable (class method)") 和 [MarkdownIt.enable](https://markdown-it.github.io/markdown-it/#MarkdownIt.enable "MarkdownIt.enable (class method)")。
+[ParserInline](./ParserInline.html "ParserInline (class)")的实例。当编写插件时，你可能用它来添加新规则。对于简单的规则控制，可以使用 [MarkdownIt.disable](#markdownit-disable "MarkdownIt.disable (class method)") 和 [MarkdownIt.enable](#markdownit-enable "MarkdownIt.enable (class method)")。
 
 ## MarkdownIt#linkify
 
@@ -364,7 +364,7 @@ MarkdownIt#linkify -> LinkifyIt
 MarkdownIt#renderer -> Renderer
 ```
 
-[Renderer](https://markdown-it.github.io/markdown-it/#Renderer "Renderer (class)") 的实例。使用它来修改输出的外观。或者为插件生成的新 token 类型添加渲染规则。
+[Renderer](./Renderer.html "Renderer (class)") 的实例。使用它来修改输出的外观。或者为插件生成的新 token 类型添加渲染规则。
 
 ##### 示例
 
@@ -380,7 +380,7 @@ md.renderer.rules['my_token'] = myToken
 
 ```
 
-参考 [Renderer](https://markdown-it.github.io/markdown-it/#Renderer "Renderer (class)") 文档和[源码](https://github.com/markdown-it/markdown-it/blob/master/lib/renderer.js)。
+参考 [Renderer](./Renderer.html "Renderer (class)") 文档和[源码](https://github.com/markdown-it/markdown-it/blob/master/lib/renderer.js)。
 
 ## MarkdownIt#utils
 

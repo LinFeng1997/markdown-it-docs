@@ -8,14 +8,14 @@
 
 ### 构造器
 
-*   [new Renderer](https://markdown-it.github.io/markdown-it/#Renderer.new "new Renderer (constructor)")
+*   [new Renderer](#renderer-new "new Renderer (constructor)")
 
 ### 类方法
-[render](https://markdown-it.github.io/markdown-it/#Renderer.render "Renderer.render (class method)"), [renderAttrs](https://markdown-it.github.io/markdown-it/#Renderer.renderAttrs "Renderer.renderAttrs (class method)"), [renderInline](https://markdown-it.github.io/markdown-it/#Renderer.renderInline "Renderer.renderInline (class method)"), [renderInlineAsText](https://markdown-it.github.io/markdown-it/#Renderer.renderInlineAsText "Renderer.renderInlineAsText (class method)"), [renderToken](https://markdown-it.github.io/markdown-it/#Renderer.renderToken "Renderer.renderToken (class method)")
+[render](#renderer-render "Renderer.render (class method)"), [renderAttrs](#renderer-renderattrs "Renderer.renderAttrs (class method)"), [renderInline](#renderer-renderinline "Renderer.renderInline (class method)"), [renderInlineAsText](#renderer-renderinlineasrext "Renderer.renderInlineAsText (class method)"), [renderToken](#renderer-rendertoken "Renderer.renderToken (class method)")
 
 ### 实例属性
 
-*   [rules](https://markdown-it.github.io/markdown-it/#Renderer.prototype.rules "Renderer#rules (instance property)")
+*   [rules](#renderer-rules "Renderer#rules (instance property)")
 
 ## Renderer.new
 
@@ -25,7 +25,7 @@
 new Renderer()
 ```
 
-创建新的 [Renderer](https://markdown-it.github.io/markdown-it/#Renderer "Renderer (class)") 实例并且填充默认的 [Renderer#rules](https://markdown-it.github.io/markdown-it/#Renderer.prototype.rules "Renderer#rules (instance property)")。
+创建新的 [Renderer](./Renderer.html "Renderer (class)") 实例并且填充默认的 [Renderer#rules](#renderer-rules "Renderer#rules (instance property)")。
 
 ## Renderer.render
 
@@ -59,7 +59,7 @@ Renderer.renderAttrs(token) -> String
 * **options** *(Object)* -- 解析器实例的参数
 * **env** *(Object)* -- 来自解析后的输入的附加数据（例如引用）
 
-类似 [Renderer.render](https://markdown-it.github.io/markdown-it/#Renderer.render "Renderer.render (class method)")，但用于 `inline` 类型的单个 token。
+类似 [Renderer.render](#renderer-render "Renderer.render (class method)")，但用于 `inline` 类型的单个 token。
 
 ## Renderer.renderInlineAsText
 
@@ -81,7 +81,7 @@ Renderer.renderAttrs(token) -> String
 * **idx** *(Number)* -- 用来渲染的 token 的索引
 * **options** *(Object)* -- 解析器实例的参数
 
-默认的 token 渲染器。可以被 [Renderer#rules](https://markdown-it.github.io/markdown-it/#Renderer.prototype.rules "Renderer#rules (instance property)") 里的自定义函数覆盖。
+默认的 token 渲染器。可以被 [Renderer#rules](#renderer-rules "Renderer#rules (instance property)") 里的自定义函数覆盖。
 
 ## Renderer#rules
 

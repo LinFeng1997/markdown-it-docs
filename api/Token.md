@@ -4,13 +4,13 @@
 
 ### 构造器
 
-*   [new Token](https://markdown-it.github.io/markdown-it/#Token.new "new Token (constructor)")
+*   [new Token](#token-new "new Token (constructor)")
 
 ### 类方法
-[attrGet](https://markdown-it.github.io/markdown-it/#Token.attrGet "Token.attrGet (class method)"), [attrIndex](https://markdown-it.github.io/markdown-it/#Token.attrIndex "Token.attrIndex (class method)"), [attrJoin](https://markdown-it.github.io/markdown-it/#Token.attrJoin "Token.attrJoin (class method)"), [attrPush](https://markdown-it.github.io/markdown-it/#Token.attrPush "Token.attrPush (class method)"), [attrSet](https://markdown-it.github.io/markdown-it/#Token.attrSet "Token.attrSet (class method)")
+[attrGet](#token-attrget "Token.attrGet (class method)"), [attrIndex](#token-attrindex "Token.attrIndex (class method)"), [attrJoin](#token-attrjoin "Token.attrJoin (class method)"), [attrPush](#token-attrpush "Token.attrPush (class method)"), [attrSet](#token-attrset "Token.attrSet (class method)")
 
 ### 实例属性
-[attrs](https://markdown-it.github.io/markdown-it/#Token.prototype.attrs "Token#attrs (instance property)"), [block](https://markdown-it.github.io/markdown-it/#Token.prototype.block "Token#block (instance property)"), [children](https://markdown-it.github.io/markdown-it/#Token.prototype.children "Token#children (instance property)"), [content](https://markdown-it.github.io/markdown-it/#Token.prototype.content "Token#content (instance property)"), [hidden](https://markdown-it.github.io/markdown-it/#Token.prototype.hidden "Token#hidden (instance property)"), [info](https://markdown-it.github.io/markdown-it/#Token.prototype.info "Token#info (instance property)"), [level](https://markdown-it.github.io/markdown-it/#Token.prototype.level "Token#level (instance property)"), [map](https://markdown-it.github.io/markdown-it/#Token.prototype.map "Token#map (instance property)"), [markup](https://markdown-it.github.io/markdown-it/#Token.prototype.markup "Token#markup (instance property)"), [meta](https://markdown-it.github.io/markdown-it/#Token.prototype.meta "Token#meta (instance property)"), [nesting](https://markdown-it.github.io/markdown-it/#Token.prototype.nesting "Token#nesting (instance property)"), [tag](https://markdown-it.github.io/markdown-it/#Token.prototype.tag "Token#tag (instance property)"), [type](https://markdown-it.github.io/markdown-it/#Token.prototype.type "Token#type (instance property)")
+[attrs](#token-attrs "Token#attrs (instance property)"), [block](#token-block "Token#block (instance property)"), [children](#token-children "Token#children (instance property)"), [content](#token-content "Token#content (instance property)"), [hidden](#token-hidden "Token#hidden (instance property)"), [info](#token-info "Token#info (instance property)"), [level](#token-level "Token#level (instance property)"), [map](#token-map "Token#map (instance property)"), [markup](#token-markup "Token#markup (instance property)"), [meta](#token-meta "Token#meta (instance property)"), [nesting](#token-nesting "Token#nesting (instance property)"), [tag](#token-tag "Token#tag (instance property)"), [type](#token-type "Token#type (instance property)")
 
 ## Token.new
 

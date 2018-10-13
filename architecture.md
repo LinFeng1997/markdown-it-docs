@@ -77,7 +77,7 @@ core
 
 Rules 是用解析器的 `state` 对象做“有魔力的事情”的函数。一个唯一的规则会与一个或多个**链**相关联。例如，`blockquote` 标记与 `blockquote`，`paragraph`，`heading` 和 `list` 链相关联。
 
-Rules 通过 [Ruler](https://markdown-it.github.io/markdown-it/#Ruler) 实例按名称管理，并且可以被 [MarkdownIt](https://markdown-it.github.io/markdown-it/#MarkdownIt) 方法 `enabled` / `disabled`。
+Rules 通过 [Ruler](./api/Ruler.html) 实例按名称管理，并且可以被 [MarkdownIt](./MarkdownIt.html) 方法 `enabled` / `disabled`。
 
 你可以注意到，某些规则具有 `validation mode` - 在此模式下规则不能修改 token 流，只能查看 token 的结尾。
 

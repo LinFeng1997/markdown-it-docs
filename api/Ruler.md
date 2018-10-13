@@ -4,7 +4,7 @@
 
 ### 说明
 
-辅助类，被 [MarkdownIt#core](https://markdown-it.github.io/markdown-it/#MarkdownIt.prototype.core "MarkdownIt#core (instance property)")，[MarkdownIt#block](https://markdown-it.github.io/markdown-it/#MarkdownIt.prototype.block "MarkdownIt#block (instance property)") 和 [MarkdownIt#inline](https://markdown-it.github.io/markdown-it/#MarkdownIt.prototype.inline "MarkdownIt#inline (instance property)") 用来管理一系列的函数（规则）：
+辅助类，被 [MarkdownIt#core](#markdownit-core "MarkdownIt#core (instance property)")，[MarkdownIt#block](#markdownit-block "MarkdownIt#block (instance property)") 和 [MarkdownIt#inline](#markdownit-inline "MarkdownIt#inline (instance property)") 用来管理一系列的函数（规则）：
 
 * 按定好的顺序维持规则
 * 将名称分配给每个规则
@@ -13,15 +13,15 @@
 * 允许将规则分配给附加的命名链（同等情况下）
 * 激活规则的缓存列表
 
-在编写插件之前，你没有必要直接使用这个类。对于简单的规则控制，使用 [MarkdownIt.disable](https://markdown-it.github.io/markdown-it/#MarkdownIt.disable "MarkdownIt.disable (class method)")，[MarkdownIt.enable](https://markdown-it.github.io/markdown-it/#MarkdownIt.enable "MarkdownIt.enable (class method)") 和 [MarkdownIt.use](https://markdown-it.github.io/markdown-it/#MarkdownIt.use "MarkdownIt.use (class method)")。
+在编写插件之前，你没有必要直接使用这个类。对于简单的规则控制，使用 [MarkdownIt.disable](#markdownit-disable "MarkdownIt.disable (class method)")，[MarkdownIt.enable](#markdownit-enable "MarkdownIt.enable (class method)") 和 [MarkdownIt.use](#markdownit-use "MarkdownIt.use (class method)")。
 
 ### 构造器
 
-*   [new Ruler](https://markdown-it.github.io/markdown-it/#Ruler.new "new Ruler (constructor)")
+*   [new Ruler](#ruler-new "new Ruler (constructor)")
 
 ### 类方法
 
-*   [after](https://markdown-it.github.io/markdown-it/#Ruler.after "Ruler.after (class method)"), [at](https://markdown-it.github.io/markdown-it/#Ruler.at "Ruler.at (class method)"), [before](https://markdown-it.github.io/markdown-it/#Ruler.before "Ruler.before (class method)"), [disable](https://markdown-it.github.io/markdown-it/#Ruler.disable "Ruler.disable (class method)"), [enable](https://markdown-it.github.io/markdown-it/#Ruler.enable "Ruler.enable (class method)"), [enableOnly](https://markdown-it.github.io/markdown-it/#Ruler.enableOnly "Ruler.enableOnly (class method)"), [getRules](https://markdown-it.github.io/markdown-it/#Ruler.getRules "Ruler.getRules (class method)"), [push](https://markdown-it.github.io/markdown-it/#Ruler.push "Ruler.push (class method)")
+*   [after](#ruler-after "Ruler.after (class method)"), [at](#ruler-at "Ruler.at (class method)"), [before](#ruler-before "Ruler.before (class method)"), [disable](#ruler-disable "Ruler.disable (class method)"), [enable](#ruler-enable "Ruler.enable (class method)"), [enableOnly](#ruler-enableonly "Ruler.enableOnly (class method)"), [getRules](#ruler-getrules "Ruler.getRules (class method)"), [push](#ruler-push "Ruler.push (class method)")
 
 ## Ruler.new
 
@@ -44,7 +44,7 @@ Ruler.after(afterName, ruleName, fn[, options])
 * **fn** *(Function)* -- 规则的函数。
 * **options** *(Object)* -- 规则的选项（不是强制的）。
 
-将新规则添加到具有给定名称的链中。也可以参考 [Ruler.before](https://markdown-it.github.io/markdown-it/#Ruler.before "Ruler.before (class method)")，[Ruler.push](https://markdown-it.github.io/markdown-it/#Ruler.push "Ruler.push (class method)")。
+将新规则添加到具有给定名称的链中。也可以参考 [Ruler.before](#ruler-before "Ruler.before (class method)")，[Ruler.push](#ruler-push "Ruler.push (class method)")。
 
 ##### 选项
 
@@ -105,7 +105,7 @@ Ruler.before(beforeName, ruleName, fn[, options])
 * **fn** *(Function)* -- 规则函数。
 * **options** *(Object)* -- 规则选项（不是强制的）。
 
-将新规则添加到具有给定名称的链中。也可以参考 [Ruler.after](https://markdown-it.github.io/markdown-it/#Ruler.after "Ruler.after (class method)")，[Ruler.push](https://markdown-it.github.io/markdown-it/#Ruler.push "Ruler.push (class method)")。
+将新规则添加到具有给定名称的链中。也可以参考 [Ruler.after](#ruler-after "Ruler.after (class method)")，[Ruler.push](#ruler-push "Ruler.push (class method)")。
 
 
 ##### 选项：
@@ -138,7 +138,7 @@ Ruler.disable(list[, ignoreInvalid]) -> Array
 
 返回已找到规则名称的列表（如果没有异常发生）。
 
-也可以参考 [Ruler.enable](https://markdown-it.github.io/markdown-it/#Ruler.enable "Ruler.enable (class method)")，[Ruler.enableOnly](https://markdown-it.github.io/markdown-it/#Ruler.enableOnly "Ruler.enableOnly (class method)")。
+也可以参考 [Ruler.enable](#ruler-enable "Ruler.enable (class method)")，[Ruler.enableOnly](#ruler-enableonly "Ruler.enableOnly (class method)")。
 
 ## Ruler.enable
 
@@ -155,7 +155,7 @@ Ruler.enable(list[, ignoreInvalid]) -> Array
 
 返回已找到规则名称的列表（如果没有异常发生）。
 
-也可以参考 [Ruler.disable](https://markdown-it.github.io/markdown-it/#Ruler.disable "Ruler.disable (class method)")，[Ruler.enableOnly](https://markdown-it.github.io/markdown-it/#Ruler.enableOnly "Ruler.enableOnly (class method)")。
+也可以参考 [Ruler.disable](#ruler-disable "Ruler.disable (class method)")，[Ruler.enableOnly](#ruler-enableonly "Ruler.enableOnly (class method)")。
 
 ## Ruler.enableOnly
 
@@ -170,7 +170,7 @@ Ruler.enableOnly(list[, ignoreInvalid]) -> Array
 
 启用给定名称的规则，并禁用所有其他的规则。如果没有找到任何规则名称，抛出错误。可以通过第二个参数禁用错误。
 
-也可以参考 [Ruler.disable](https://markdown-it.github.io/markdown-it/#Ruler.disable "Ruler.disable (class method)")，[Ruler.enable](https://markdown-it.github.io/markdown-it/#Ruler.enable "Ruler.enable (class method)")。
+也可以参考 [Ruler.disable](#ruler-disable "Ruler.disable (class method)")，[Ruler.enable](#ruler-enable "Ruler.enable (class method)")。
 
 ## Ruler.getRules
 
@@ -196,7 +196,7 @@ Ruler.push(ruleName, fn[, options])
 * **fn** *(Function)* -- 规则函数。
 * **options** *(Object)* -- 规则选项（不是强制的）。
 
-将新规则推到链的末尾。也可以参考 [Ruler.before](https://markdown-it.github.io/markdown-it/#Ruler.before "Ruler.before (class method)")，[Ruler.after](https://markdown-it.github.io/markdown-it/#Ruler.after "Ruler.after (class method)")。
+将新规则推到链的末尾。也可以参考 [Ruler.before](#ruler-before "Ruler.before (class method)")，[Ruler.after](#ruler-after "Ruler.after (class method)")。
 
 ##### 选项：
 

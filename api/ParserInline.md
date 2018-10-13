@@ -10,15 +10,15 @@ token 化段落内容。
 
 ### 构造器
 
-*   [new ParserInline](https://markdown-it.github.io/markdown-it/#ParserInline.new "new ParserInline (constructor)")
+*   [new ParserInline](#parserinline-new "new ParserInline (constructor)")
 
 ### 类方法
 
-*   [parse](https://markdown-it.github.io/markdown-it/#ParserInline.parse "ParserInline.parse (class method)")
+*   [parse](#parserinline-parse "ParserInline.parse (class method)")
 
 ### 实例属性
 
-*   [ruler](https://markdown-it.github.io/markdown-it/#ParserInline.prototype.ruler "ParserInline#ruler (instance property)"), [ruler2](https://markdown-it.github.io/markdown-it/#ParserInline.prototype.ruler2 "ParserInline#ruler2 (instance property)")
+*   [ruler](#parserinline-ruler "ParserInline#ruler (instance property)"), [ruler2](#parserinline-ruler2 "ParserInline#ruler2 (instance property)")
 
 ## ParserInline.new
 
@@ -46,7 +46,7 @@ ParserInline.parse(str, md, env, outTokens)
 ParserInline#ruler -> Ruler
 ```
 
-[Ruler](https://markdown-it.github.io/markdown-it/#Ruler "Ruler (class)") 实例。维持内联规则的配置。
+[Ruler](./Ruler.html "Ruler (class)") 实例。维持内联规则的配置。
 
 ## ParserInline#ruler2
 
@@ -56,4 +56,4 @@ ParserInline#ruler -> Ruler
 ParserInline#ruler2 -> Ruler
 ```
 
-[Ruler](https://markdown-it.github.io/markdown-it/#Ruler "Ruler (class)") 实例。用于后处理的第二标尺(second ruler)（例如强调规则）。
+[Ruler](./Ruler.html "Ruler (class)") 实例。用于后处理的第二标尺(second ruler)（例如强调规则）。

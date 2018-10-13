@@ -8,13 +8,13 @@
 顶层规则执行器。粘合块/内联的解析器，并进行中间(过程)的转换。
 
 ### 构造器
-[new Core](https://markdown-it.github.io/markdown-it/#Core.new)
+[new Core](#core-new)
 
 ### 类方法
-[process](https://markdown-it.github.io/markdown-it/#Core.process)
+[process](#core-process)
 
 ### 实例属性
-[ruler](https://markdown-it.github.io/markdown-it/#Core.prototype.ruler)
+[ruler](#core-ruler)
 
 ## Core.new
 [源代码](https://github.com/markdown-it/markdown-it/blob/master/lib/parser_core.js#L26)
@@ -39,4 +39,4 @@ Core.process(state)
 Core#ruler -> Ruler
 ```
 
-[Ruler](https://markdown-it.github.io/markdown-it/#Ruler) 实例。维持核心规则的配置。
+[Ruler](./Ruler.html#ruler) 实例。维持核心规则的配置。

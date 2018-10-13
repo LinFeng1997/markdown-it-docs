@@ -6,7 +6,7 @@ sidebar: auto
 在继续之前，确保你已经阅读：
 
 1. [README](https://github.com/markdown-it/markdown-it#markdown-it)
-2. [API 文档](https://markdown-it.github.io/markdown-it/)
+2. [API 文档](./)
 3. [架构说明](architecture.md)
 
 
