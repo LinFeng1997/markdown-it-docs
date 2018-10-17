@@ -10,15 +10,15 @@
 
 ### 构造器
 
-*   [new ParserBlock](https://markdown-it.github.io/markdown-it/#ParserBlock.new "new ParserBlock (constructor)")
+*   [new ParserBlock](#parserblock-new "new ParserBlock (constructor)")
 
 ### 类方法
 
-*   [parse](https://markdown-it.github.io/markdown-it/#ParserBlock.parse "ParserBlock.parse (class method)")
+*   [parse](#parserblock-parse "ParserBlock.parse (class method)")
 
 ### 实例属性
 
-*   [ruler](https://markdown-it.github.io/markdown-it/#ParserBlock.prototype.ruler "ParserBlock#ruler (instance property)")
+*   [ruler](#parserblock-ruler "ParserBlock#ruler (instance property)")
 
 ## ParserBlock.new
 
@@ -46,4 +46,4 @@ ParserBlock.parse(str, md, env, outTokens)
 ParserBlock#ruler -> Ruler
 ```
 
-[Ruler](https://markdown-it.github.io/markdown-it/#Ruler "Ruler (class)") 实例。维持块规则的配置。
+[Ruler](./Ruler.html "Ruler (class)") 实例。维持块规则的配置。

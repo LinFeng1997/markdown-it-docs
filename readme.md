@@ -49,8 +49,8 @@ var result = md.renderInline('__markdown-it__ rulezz!');
 
 ### 带有预设和选项的初始化
 
-(\*)预设(preset)定义了激活的规则以及选项的组合。可以是
-`"commonmark"`，`"zero"` 或者 `"default"` （如果省略的话）。参考 [API 文档](https://markdown-it.github.io/markdown-it/#MarkdownIt.new) 获取更多细节。
+预设(preset)定义了激活的规则以及选项的组合。可以是
+`"commonmark"`，`"zero"` 或者 `"default"` （如果省略的话）。
 
 ```js
 // commonmark 模式
