@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2aacbc3d-8aee-4311-8591-37c2b58a9662" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/deploy.sh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,7 +21,7 @@
         <entry file="file://$PROJECT_DIR$/scripts/deploy.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="19" selection-start-column="19" selection-end-column="19" />
+              <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -153,7 +154,7 @@
       <option name="presentableId" value="Default" />
       <updated>1539760466472</updated>
       <workItem from="1539760468243" duration="162000" />
-      <workItem from="1547811665454" duration="492000" />
+      <workItem from="1547811665454" duration="549000" />
     </task>
     <task id="LOCAL-00001" summary="deploy&#10;&#10;(cherry picked from commit 63d2360)">
       <created>1539760536104</created>
@@ -180,20 +181,21 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="654000" />
+    <option name="totallyTimeSpent" value="711000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="23" width="1385" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24926686" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24926686" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32948717" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32948717" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32948717" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32948717" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -268,7 +270,7 @@
     <entry file="file://$PROJECT_DIR$/scripts/deploy.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="19" selection-start-column="19" selection-end-column="19" />
+          <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
         </state>
       </provider>
     </entry>
