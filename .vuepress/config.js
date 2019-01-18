@@ -1,3 +1,4 @@
+const path = require('path');
 module.exports = {
   "themeConfig": {
     "sidebar": ["/", "/api/Core.md", "/api/MarkdownIt.md", "/api/ParserBlock.md", "/api/ParserInline.md", "/api/Renderer.md", "/api/Ruler.md", "/api/Token.md"],
@@ -21,7 +22,7 @@ module.exports = {
     ]
   },
   "less": {"javascriptEnabled": true},
-  "dest": "/Users/xuyunfeng/Desktop/play/markdown-it/.vuepress/markdown-it",
+  "dest": path.resolve(__dirname,"../markdown-it"),
   "title": "markdown-it",
   head: [
     ['script', {
