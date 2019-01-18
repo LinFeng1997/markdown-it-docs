@@ -1,4 +1,4 @@
-cd markdown-it
+cd markdown-it-docs
 git init
 git add -A
 git commit -m 'deploy'
