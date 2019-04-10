@@ -1,0 +1,15 @@
+{
+  "name": "weekly.docschina.org",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev",
+    "start": "npm run dev",
+    "build": "vuepress build -d ./dist",
+    "deploy": "sh ./scripts/deploy.sh"
+  },
+  "dependencies": {
+    "vuepress": "^0.14.1"
+  }
+}
