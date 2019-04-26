@@ -18,7 +18,7 @@ bower install markdown-it --save
 
 参考：
 
-- [开发者信息](https://github.com/markdown-it/markdown-it/tree/master/docs) -
+- [开发者建议](/development.md) -
   为插件开发者准备。
 	
 ### 简单用法
@@ -49,7 +49,7 @@ var result = md.renderInline('__markdown-it__ rulezz!');
 
 ### 带有预设和选项的初始化
 
-预设(preset)定义了激活的规则以及选项的组合。可以是
+预设(preset)定义了激活的规则和选项的组合。可以是
 `"commonmark"`，`"zero"` 或者 `"default"` （如果省略的话）。
 
 ```js
@@ -78,15 +78,15 @@ var md = require('markdown-it')({
   // 启用一些语言中立的替换 + 引号美化
   typographer:  false,
 
-  // 双 + 单引号替换对，当 typographer 启用时。
-  // 或者智能引号等，可以是 String 或 Array。
+  // 当 typographer 启用时，成倍的 + 单引号替换对。
+  // 或者智能(smartquotes)引号等，可以是 String 或 Array。
   //
   // 比方说，你可以支持 '«»„“' 给俄罗斯人使用， '„“‚‘'  给德国人使用。
   // 还有 ['«\xA0', '\xA0»', '‹\xA0', '\xA0›'] 给法国人使用（包括 nbsp）。
   quotes: '“”‘’',
 
-  // 高亮函数，会返回转义的HTML。
-  // 或 '' 如果源字符串未更改，则应在外部进行转义。
+  // 高亮函数，会返回转义的 HTML。
+  // 如果源字符串未更改，且应该进行外部的转义，或许返回 ''
   // 如果结果以 <pre ... 开头，内部包装器则会跳过。
   highlight: function (/*str, lang*/) { return ''; }
 });
@@ -175,7 +175,7 @@ md.linkify.tlds('.py', false);  // 禁用 .py 作为顶级域
 
 ### 管理规则
 
-默认情况下，所有规则都已经启用，但可以通过选项进行限制。在插件上加载其所有规则都会自动启用。
+默认情况下，所有规则都已经启用，但可以通过选项进行限制。在插件加载时，它的所有规则都会自动启用。
 
 ```js
 // 当前激活/禁用的规则
