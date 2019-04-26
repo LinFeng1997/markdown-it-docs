@@ -33,9 +33,9 @@ core
 
 ```
 
-解析的结果是一个 *list tokens*，它将被传递给 `renderer` 来生成 html 内容。
+解析的结果是一个 *tokens 列表*，它将被传递给 `renderer` 来生成 html 内容。
 
-这些 tokens 能被自身解析来生成更多的 tokens。（例如：一个 `list token` 能被拆分为多个内联 tokens）。
+这些 tokens 能被自身解析，来生成更多的 tokens。（例如：一个 `tokens 列表` 能被拆分为多个内联 tokens）。
 
 一个 `env` 沙盒能被用来与 tokens 来给你的解析器和渲染器注入额外的变量。
 
@@ -47,9 +47,8 @@ core
 不同之处一目了然：
 
 - Tokens 是一个简单的序列（数组）。
-- 打开的和关闭的标签是隔离的。
-- 有特殊的 token 对象，比如“内联容器(inline container)”，它有嵌套的 tokens。
-- 一系列内联的标签（粗体，斜体，文本等等）
+- 打开和关闭标签是隔离的。
+- 有特殊的 token 对象，比如“内联容器(inline container)”，它有嵌套的 tokens：一系列内联的标签（粗体，斜体，文本等等）。
 
 参考 [token class](https://github.com/markdown-it/markdown-it/blob/master/lib/token.js)
 以获得关于每个 token 内容的细节。
@@ -77,22 +76,22 @@ core
 
 Rules 是用解析器的 `state` 对象做“有魔力的事情”的函数。一个唯一的规则会与一个或多个**链**相关联。例如，`blockquote` 标记与 `blockquote`，`paragraph`，`heading` 和 `list` 链相关联。
 
-Rules 通过 [Ruler](./api/Ruler.html) 实例按名称管理，并且可以被 [MarkdownIt](./MarkdownIt.html) 方法 `enabled` / `disabled`。
+Rules 通过 [Ruler](./api/Ruler.html) 实例按名称管理，并且可以被 [MarkdownIt](./MarkdownIt.html) 方法 `启用(enabled)` / `禁用(disabled)`。
 
-你可以注意到，某些规则具有 `validation mode` - 在此模式下规则不能修改 token 流，只能查看 token 的结尾。
+你可以注意到，某些规则具有 `校验模式(validation mode)` - 在此模式下规则不能修改 token 流，只能查看 token 的结尾。
 
 这是一个重要的设计原则 - token 流在块和内联解析阶段是“只写的”。
 
 解析器旨在使规则彼此独立。你可以安全地启用/禁用它们，或者添加新的。
 关于如何创建新规则没有通用的方法 - 设计具有良好数据隔离的分布式状态机是一项棘手的业务。但是你可以调查现有规则和插件，以查看可能的方法。
 
-此外，在复杂的情况下，你可以尝试在跟踪器(tracker)中寻求帮助。这种情况是很简单的 - 从你的 ticket 上可以清楚地看到，你研究过文档，源码，并尝试自己做一些事情。我们绝不会拒绝真正的开发人员。
+此外，在复杂的情况下，你可以尝试在跟踪器(tracker)中寻求帮助。这种情况是很简单的 - 显而易见，你研究过文档，源码，并尝试自己做一些事情。我们绝不会拒绝真正的开发人员。
 
 
 ## 渲染器(Renderer)
 
 生成 token 流后，将其传递给 [renderer](https://github.com/markdown-it/markdown-it/blob/master/lib/renderer.js)。
-然后它会遍历所有 token，将每个token 传递给与 token 的 type 属性同名的规则。
+然后它会遍历所有 token，将每个 token 传递给与 token 的 type 属性同名的规则。
 
 渲染器规则位于 `md.renderer.rules [name]` ，是简单的具有相同特征的函数：
 
@@ -176,11 +175,11 @@ var md = require('markdown-it')()
 
 ## 总结
 
-这在 [数据流](#数据流) 中提到过，但让我们再重复序列一次：
+这在 [数据流](#数据流) 中提到过，但让我们再重复一遍：
 
 1. 解析块，并使用块 token 填充顶层 token 流。
 2. 解析内联容器上的内容，填充 `.children` 属性。
-3. 渲染过程。
+3. 渲染发生了。
 
 介于两者之间你可以应用额外的转换:)。全部内容
 可见于每个链的顶部
