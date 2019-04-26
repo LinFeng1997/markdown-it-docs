@@ -23,8 +23,8 @@ sidebar: auto
   - 有时，仅修改渲染器就足够了。例如，添加标题 ID 或给链接添加 `target="_blank"`。
   - 插件不应该要求 `markdown-it` 包作为包 `package.json` 中的依赖项。
     如果需要访问内部实体，则可以通过解析器实例获得这些信息，通过插件加载。请参考主类和嵌套对象的属性。
-2. 搜索现有的插件
-   [插件](https://www.npmjs.org/browse/keyword/markdown-it-plugin)或[规则](https://github.com/markdown-it/markdown-it/tree/master/lib)其实做类似的事情。修改现有代码可以更简单，而不是从头开始编写。
+2. 搜索现有的
+   [插件](https://www.npmjs.org/browse/keyword/markdown-it-plugin)或[规则](https://github.com/markdown-it/markdown-it/tree/master/lib)做类似的事情。修改现有代码可以更简单，而不是从头开始编写。
   
 3. 如果你做了所有的步骤，但仍然有问题-问 [tracker](https://github.com/markdown-it/markdown-it/issues)。但是，请注意：
    - 具体点。诸如“如何做插件”之类的通用问题，“如何学习编程”是不被待见的。
