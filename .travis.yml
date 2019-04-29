@@ -5,7 +5,7 @@ language: node_js
 node_js:
   - "8"
 script:
-  - bash ./src/scripts/deploy.sh
+  - bash ./scripts/deploy.sh
 sudo: required
 install:
   - npm install --global yarn
